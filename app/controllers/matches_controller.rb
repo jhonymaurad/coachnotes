@@ -1,5 +1,6 @@
 class MatchesController < ApplicationController
   before_action :set_match, only: [:show, :update, :destroy]
+  before_action :authenticate_coach, only: [:create, :update, :destroy]
 
   # GET /matches
   def index
