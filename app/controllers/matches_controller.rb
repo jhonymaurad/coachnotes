@@ -1,6 +1,6 @@
 class MatchesController < ApplicationController
   before_action :set_match, only: [:show, :update, :destroy]
-  before_action :authenticate_coach, only: [:create, :update, :destroy]
+  before_action :authenticate_coach, only: [:create, :update, :destroy, :mine]
 
   # GET /matches
   def index
@@ -16,7 +16,7 @@ class MatchesController < ApplicationController
 
   # POST /matches
   def create
-    @match = Match.new(match_params)
+    @match = current_user.matches.new(match_params)
 
     if @match.save
       render json: @match, status: :created, location: @match
@@ -37,6 +37,12 @@ class MatchesController < ApplicationController
   # DELETE /matches/1
   def destroy
     @match.destroy
+  end
+
+  # GET /posts/mine
+  def mine
+    @posts = current_user.posts
+     render json: @posts
   end
 
   private

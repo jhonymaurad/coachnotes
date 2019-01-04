@@ -5,3 +5,30 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Coach.destroy_all
+Match.destroy_all
+
+coaches = Coach.create([
+  {
+    username: 'jhony',
+    password: '1234'
+  },
+  {
+    username: 'luis',
+    password: 'aaaa'
+  },
+  {
+    username: 'edgar',
+    password: 'bbbb'
+  }
+
+])
+
+coaches.each do |coach|
+  3.times do
+    coach.matches.create(title: Faker::Football.competition, date: Faker::Date.forward(23), location: Faker::Address.full_address, team: Faker::Football.team)
+  end
+end
+
+puts "#{Match.count} matches/practices and #{Coach.count} coaches in database"

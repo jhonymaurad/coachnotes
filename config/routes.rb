@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  post 'coach_token' => 'coach_token#create'
+  post 'user_token' => 'user_token#create'
   resources :coaches
-  resources :matches
+  resources :matches do
+    collection do
+      get 'mine'
+    end
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
