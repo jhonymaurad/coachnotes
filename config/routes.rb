@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  post 'user_token' => 'user_token#create'
+  post 'coach_token' => 'coach_token#create'
   resources :coaches
   resources :matches do
     collection do

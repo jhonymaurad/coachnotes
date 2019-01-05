@@ -16,7 +16,7 @@ class MatchesController < ApplicationController
 
   # POST /matches
   def create
-    @match = current_user.matches.new(match_params)
+    @match = current_coach.matches.new(match_params)
 
     if @match.save
       render json: @match, status: :created, location: @match
