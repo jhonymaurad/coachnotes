@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Profile from './components/Profile';
 import AuthForms from './components/AuthForms';
+import AddMatch from './components/AddMatch';
 import Footer from './components/Footer';
 
 class App extends Component {
@@ -43,6 +44,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/auth" component={AuthForms} />
           <Route path="/profile" component={Profile} />
+          <Route path="/addmatch" component={AddMatch} />
           <Footer />
         </div>
       </Router>

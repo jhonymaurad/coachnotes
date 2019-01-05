@@ -9,7 +9,7 @@ export default function NavBar(props){
   return(
     <nav className='navBar'>
       <Link to='/'><IoLogoDribbble className='navIcons' />Home</Link>
-      <Link to='/matches'><IoMdCalendar className='navIcons' />Calendar</Link>
+      <Link to='/addmatch'><IoMdCalendar className='navIcons' />Add Match</Link>
       <Link to='/auth'><IoIosContact className='navIcons' />Register / Login</Link>
       <Link to='/profile'><IoIosContact className='navIcons' />Profile</Link>
     </nav>
