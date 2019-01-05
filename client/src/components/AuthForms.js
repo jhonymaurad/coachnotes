@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import LoginForm from './LoginForm';
-import { login } from './services/auth';
-import Redirect from 'react-router-dom';
+import { login } from '../services/auth';
+import { Redirect } from 'react-router-dom';
 
-class AuthForms extends Component {
+export default class AuthForms extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -34,7 +34,7 @@ class AuthForms extends Component {
     this.setState(prevState => (
       {
         credentials: {
-          ..prevState.credentials,
+          ...prevState.credentials,
           [name] : value
         }
       }

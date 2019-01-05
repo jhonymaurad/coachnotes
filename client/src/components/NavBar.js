@@ -11,6 +11,12 @@ export default function NavBar(props){
       <li>
         <Link to='/matches'>Matches</Link>
       </li>
+      <li>
+        <Link to='/auth'>Log in / Register</Link>
+      </li>
+      <li>
+        <Link to='/auth'>Profile</Link>
+      </li>
 
 
     </ul>
