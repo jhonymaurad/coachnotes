@@ -1,24 +1,17 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
+import { IoLogoDribbble } from "react-icons/io";
+import { IoMdCalendar } from "react-icons/io";
+import { IoIosContact } from "react-icons/io";
 
 export default function NavBar(props){
   return(
-    <ul>
-      <li>
-        <Link to='/'>Home</Link>
-      </li>
-      <li>
-        <Link to='/matches'>Matches</Link>
-      </li>
-      <li>
-        <Link to='/auth'>Log in / Register</Link>
-      </li>
-      <li>
-        <Link to='/auth'>Profile</Link>
-      </li>
-
-
-    </ul>
+    <nav className='navBar'>
+      <Link to='/'><IoLogoDribbble className='navIcons' />Home</Link>
+      <Link to='/matches'><IoMdCalendar className='navIcons' />Calendar</Link>
+      <Link to='/auth'><IoIosContact className='navIcons' />Register / Login</Link>
+      <Link to='/profile'><IoIosContact className='navIcons' />Profile</Link>
+    </nav>
   );
 }
