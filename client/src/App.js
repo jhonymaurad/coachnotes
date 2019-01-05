@@ -1,21 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-import axios from 'axios';
-
-async function getMatches() {
-  const resp = await axios.get('/api/matches');
-  console.log(resp.data);
-}
-
-getMatches();
+import NavBar from './components/NavBar';
+import Home from './components/Home';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        hello world
-      </div>
+      <Router>
+        <div className="App">
+          <NavBar />
+          <Route exact path="/" component={Home} />
+        </div>
+      </Router>
     );
   }
 }
