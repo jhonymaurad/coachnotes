@@ -39,10 +39,10 @@ class MatchesController < ApplicationController
     @match.destroy
   end
 
-  # GET /posts/mine
+  # GET /matches/mine
   def mine
-    @posts = current_user.posts
-     render json: @posts
+    @matches = current_coach.matches
+     render json: @matches
   end
 
   private
