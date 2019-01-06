@@ -5,10 +5,10 @@ export default class AddMatch extends Component{
     super(props);
     this.state = {
       formData: {
-        "title": "",
-  			"date": "",
-  			"location": "",
-  			"team": ""
+        "title": '',
+  			"date": '',
+  			"location": '',
+  			"team": ''
       }
     }
     this.handleChange = this.handleChange.bind(this);
@@ -23,6 +23,7 @@ export default class AddMatch extends Component{
       }
     }));
   }
+
   handleSubmit = async (e) => {
     e.preventDefault();
     alert('submitted');
@@ -32,16 +33,19 @@ export default class AddMatch extends Component{
         <div className="form-container">
             <form onSubmit={this.handleSubmit} className="addMatchForm">
                 <label>
-                    <h3>Add a match / practice</h3>
-                    <br />
-                    <br />
-                    <br />
+                    <h3>Add a match / practice</h3>                  
                 </label>
                 <label>
-                    Ttle: <br/>
-                    <select  type = 'input'>
-                        <option value="Trek">Match</option>
-                        <option value="Tropic">Practice</option>
+                    Title: <br/>
+                    <select
+                      id='title'
+                      type = 'input'
+                      onChange={this.handleChange}
+                      value={this.state.title}
+                      name='title'
+                      >
+                        <option value="match">Match</option>
+                        <option value="practice">Practice</option>
                     </select>
                 </label>
                 <br/>
@@ -50,22 +54,31 @@ export default class AddMatch extends Component{
                     <input
                         id="date"
                         type="date"
+                        onChange={this.handleChange}
+                        value={this.state.date}
+                        name='date'
                     />
                 </label>
                 <br />
                 <label>
                     Location: <br/>
                     <input
-                        id="date"
+                        id="location"
                         type="text"
+                        onChange={this.handleChange}
+                        value={this.state.location}
+                        name='location'
                     />
                 </label>
                 <br/>
                 <label>
                     Team: <br/>
                     <input
-                        id="date"
+                        id="team"
                         type="text"
+                        onChange={this.handleChange}
+                        value={this.state.team}
+                        name='team'
                     />
                 </label>
                 <input type="submit" value="SUBMIT" />

@@ -26,7 +26,7 @@ class App extends Component {
   }
 
   handleChange(e){
-    const { name , value } = e.target
+    const {name , value} = e.target
     this.setState(prevState => (
       {
         login: {
@@ -36,6 +36,19 @@ class App extends Component {
       }
     ))
   }
+
+  handleRegisterChange(e){
+    const {name, value} = e.target
+    this.setState(prevState => (
+      {
+        register: {
+          ...prevState.register,
+          [name] : value
+        }
+      }
+    ))
+  }
+  
   render() {
     return (
       <Router>
