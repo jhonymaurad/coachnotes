@@ -8,7 +8,7 @@ export default class AuthForms extends Component {
     super(props);
     this.state = {
       credentials: {
-        username: '',
+        email: '',
         password: ''
       },
       redirectToProfile: false

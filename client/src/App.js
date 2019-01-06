@@ -15,11 +15,11 @@ class App extends Component {
     super();
     this.state = {
       login: {
-        username: '',
+        email: '',
         password: ''
       },
       register: {
-        username: '',
+        email: '',
         password: '',
         password_confirmation: ''
       }

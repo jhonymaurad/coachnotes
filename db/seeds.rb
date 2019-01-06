@@ -11,15 +11,15 @@ Match.destroy_all
 
 coaches = Coach.create([
   {
-    username: 'jhony',
+    email: 'jhony@ga',
     password: '1234'
   },
   {
-    username: 'luis',
+    email: 'luis@ga',
     password: 'aaaa'
   },
   {
-    username: 'edgar',
+    email: 'edgar@ga',
     password: 'bbbb'
   }
 

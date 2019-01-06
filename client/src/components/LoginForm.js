@@ -7,11 +7,11 @@ export default function LoginForm(props){
       onSubmit={props.handleLogin}
     >
       <h2>Log In</h2>
-      <h5>username:</h5>
+      <h5>email:</h5>
       <input
-        name = 'username'
+        name = 'email'
         onChange={props.handleChange}
-        value={props.login.username}
+        value={props.login.email}
       />
       <br></br>
       <h5>password:</h5>

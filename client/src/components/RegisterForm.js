@@ -6,7 +6,7 @@ export default class RegisterForm extends Component{
     super(props);
     this.state = {
       coach: {
-        username: '',
+        email: '',
         password: ''
       }
     };
@@ -26,7 +26,7 @@ export default class RegisterForm extends Component{
 
   handleSubmit = async (e) => {
     e.preventDefault();
-		if(this.state.coach.username && this.state.coach.password){
+		if(this.state.coach.email && this.state.coach.password){
 			const user = await register(this.state.coach);
 		}
   }
@@ -38,14 +38,14 @@ export default class RegisterForm extends Component{
         onSubmit={this.handleSubmit}
       >
         <h2>Register</h2>
-        <label htmlFor="username">Username</label>
+        <label htmlFor="email">email</label>
         <input
           type="text"
-          id="username"
-          name="username"
-          placeholder='username'
+          id="email"
+          name="email"
+          placeholder='email'
           onChange={this.handleChange}
-          value={this.state.username}
+          value={this.state.email}
         />
         <label htmlFor="password">Password</label>
         <input
