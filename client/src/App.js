@@ -17,11 +17,6 @@ class App extends Component {
       login: {
         email: '',
         password: ''
-      },
-      register: {
-        email: '',
-        password: '',
-        password_confirmation: ''
       }
     }
   }
@@ -32,18 +27,6 @@ class App extends Component {
       {
         login: {
           ...prevState.login,
-          [name] : value
-        }
-      }
-    ))
-  }
-
-  handleRegisterChange(e){
-    const {name, value} = e.target
-    this.setState(prevState => (
-      {
-        register: {
-          ...prevState.register,
           [name] : value
         }
       }

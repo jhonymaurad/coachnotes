@@ -26,7 +26,7 @@ coaches = Coach.create([
 ])
 
 coaches.each do |coach|
-  3.times do
+  5.times do
     coach.matches.create(title: Faker::Football.competition, date: Faker::Date.forward(23), location: Faker::Address.full_address, team: Faker::Football.team)
   end
 end
