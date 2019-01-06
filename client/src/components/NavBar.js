@@ -10,8 +10,9 @@ export default function NavBar(props){
     <nav className='navBar'>
       <Link to='/'><IoLogoDribbble className='navIcons' />Home</Link>
       <Link to='/addmatch'><IoMdCalendar className='navIcons' />Add Match</Link>
-      <Link to='/auth'><IoIosContact className='navIcons' />Register / Login</Link>
+      <Link to='/auth'><IoIosContact className='navIcons' />Login</Link>
       <Link to='/profile'><IoIosContact className='navIcons' />Profile</Link>
+      <Link to='/register'><IoIosContact className='navIcons' />Register</Link>
     </nav>
   );
 }

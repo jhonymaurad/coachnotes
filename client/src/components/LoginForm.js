@@ -3,6 +3,7 @@ import React from 'react';
 export default function LoginForm(props){
   return(
     <form
+      className='addMatchForm'
       onSubmit={props.handleLogin}
     >
       <h2>Log In</h2>
