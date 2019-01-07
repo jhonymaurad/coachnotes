@@ -11,6 +11,7 @@ export default class Profile extends Component {
       redirectToAuth: false
     }
     this.logOut = this.logOut.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   async componentDidMount(){
@@ -30,7 +31,11 @@ export default class Profile extends Component {
   async handleDelete(e){
     const token = localStorage.getItem('token');
     const match = await deleteMatch(token, e.currentTarget.id);
-    getMyMatches();
+    const matches = await getMyMatches();
+    this.setState(prevState => ({
+      ...prevState.matches,
+      matches
+    }))
   }
 
   render(){

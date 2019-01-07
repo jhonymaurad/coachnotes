@@ -27,8 +27,9 @@ export default class AddMatch extends Component{
 
   handleSubmit = async (e) => {
     e.preventDefault();
+    const token = localStorage.getItem('token');
     if(this.state.formData.title && this.state.formData.date && this.state.formData.location && this.state.formData.team){
-      const match = await createMatch(this.state.formData);
+      const match = await createMatch(token, this.state.formData);
     }
   }
   render(){
