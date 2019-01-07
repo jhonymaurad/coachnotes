@@ -1,4 +1,5 @@
 import React from 'react';
+import { GoSignIn } from 'react-icons/go';
 
 export default function LoginForm(props){
   return(
@@ -6,7 +7,8 @@ export default function LoginForm(props){
       className='addMatchForm'
       onSubmit={props.handleLogin}
     >
-      <h2>Log In</h2>
+      <h2>Log In    <GoSignIn/></h2>
+
       <h5>email:</h5>
       <input
         type="text"
