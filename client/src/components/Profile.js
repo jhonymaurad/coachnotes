@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import UpdateActivityForm from './UpdateActivityForm';
 import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import { getMyMatches } from '../services/matches';
@@ -82,40 +83,15 @@ export default class Profile extends Component {
       team
     } = editFormData;
     return(
-      <div>
-        <div>Edit Form: {match.title}</div>
-        <form onSubmit={this.handleUpdate}>
-          <label htmlFor= 'title'>Title</label>
-          <input
-            type='text'
-            name='title'
-            value= {title}
-            id='title'
-            onChange={this.handleChange} />
-          <label htmlFor= 'date'>Date< /label>
-          <input
-            type='date'
-            name='date'
-            value= {date}
-            id='date'
-            onChange={this.handleChange} />
-          <label htmlFor= 'location'>Location< /label>
-          <input
-            type='text'
-            name='date'
-            value= {location}
-            id='date'
-            onChange={this.handleChange} />
-          <label htmlFor= 'team'>Team< /label>
-          <input
-            type='text'
-            name='team'
-            value={team}
-            id={team}
-            onChange={this.handleChange} />
-          <input type='submit' value='Update Match' />
-          < /form>
-      </div>
+      <UpdateActivityForm
+        title= {match.title}
+        onSubmit={this.handleUpdate}
+        onChange={this.handleChange}
+        valueTitle={title}
+        valueDate={date}
+        valueLocation={location}
+        valueTeam={team}
+      />
     )
   }
 
@@ -148,6 +124,8 @@ export default class Profile extends Component {
           <GoSignOut onClick={this.logOut} className='navIcons' /> logOut
         </div>
         <h3>This are your events: </h3>
+        <p>* If you need to update an activity, click on it and a form will be display at the bottom
+         of the page to input the new information for the event</p>
         <ul className='activities-container'>
           {matches.map(match => (
             <div

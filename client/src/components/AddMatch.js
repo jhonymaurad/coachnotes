@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Redirect } from 'react-router-dom';
 import { createMatch } from '../services/createMatch';
 
 export default class AddMatch extends Component{
@@ -10,7 +11,8 @@ export default class AddMatch extends Component{
   			"date": '',
   			"location": '',
   			"team": ''
-      }
+      },
+      redirectToProfile: false
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -31,8 +33,17 @@ export default class AddMatch extends Component{
     if(this.state.formData.title && this.state.formData.date && this.state.formData.location && this.state.formData.team){
       const match = await createMatch(token, this.state.formData);
     }
+    this.setState(
+      {
+        redirectToProfile: true
+      }
+    );
   }
   render(){
+    if(this.state.redirectToProfile)
+    return (
+      <Redirect to="/profile" />
+    )
     return (
         <div className="form-container">
             <form onSubmit={this.handleSubmit} className="addMatchForm">
