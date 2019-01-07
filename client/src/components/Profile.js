@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import { getMyMatches } from '../services/matches';
 import { deleteMatch } from '../services/deleteMatch';
 import { updateMatch } from '../services/updateMatch';
+import { IoMdCalendar } from "react-icons/io";
+import { GoSignOut } from 'react-icons/go';
 
 export default class Profile extends Component {
   constructor(props){
@@ -140,19 +143,29 @@ export default class Profile extends Component {
     return(
       <div>
         <h2>Welcome Back </h2>
+        <div className='profile-actions'>
+          <Link to='/addmatch'><IoMdCalendar className='navIcons' /></Link>Add Activity
+          <GoSignOut onClick={this.logOut} className='navIcons' /> logOut
+        </div>
         <h3>This are your events: </h3>
-        <button onClick={this.logOut}>Log Out</button>
-        <ul>
+        <ul className='activities-container'>
           {matches.map(match => (
             <div
               key={match.id}
-              className='activity-container'
+              className='activity'
               onClick={() => this.updateFocusMatch(match.id)}>
-              <h3>{match.title}</h3>
+              <h3>Type of event:</h3>
+              <h4>{match.title}</h4>
+              <h3>Date:</h3>
               <h4>{match.date}</h4>
+              <h3>Location:</h3>
               <h4>{match.location}</h4>
+              <h3>Opposing Team:</h3>
               <h4>{match.team}</h4>
-              <button id={match.id} onClick={this.handleDelete}>Delete</button>
+              <button
+                id={match.id}
+                onClick={this.handleDelete}
+                className='deleteButtons'>Delete</button>
             </div>
           ))}
         </ul>
