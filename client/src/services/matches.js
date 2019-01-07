@@ -2,7 +2,7 @@ import axios from 'axios';
 
 async function getMyMatches() {
   const resp = await axios({
-    url: 'api/match/mine',
+    url: 'api/matches/mine',
     headers: {
       'Authorization': `Bearer ${localStorage.getItem('token')}`
     }

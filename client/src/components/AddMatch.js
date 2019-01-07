@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { createMatch } from '../services/createMatch';
 
 export default class AddMatch extends Component{
   constructor(props) {
@@ -26,14 +27,16 @@ export default class AddMatch extends Component{
 
   handleSubmit = async (e) => {
     e.preventDefault();
-    alert('submitted');
+    if(this.state.formData.title && this.state.formData.date && this.state.formData.location && this.state.formData.team){
+      const match = await createMatch(this.state.formData);
+    }
   }
   render(){
     return (
         <div className="form-container">
             <form onSubmit={this.handleSubmit} className="addMatchForm">
                 <label>
-                    <h3>Add a match / practice</h3>                  
+                    <h3>Add a match / practice</h3>
                 </label>
                 <label>
                     Title: <br/>

@@ -73,3 +73,8 @@ input[type=submit]:hover {
 .footer{
   font-size: 20px;
 }
+.activity-container{
+  background-color: white;
+  margin-right: 30px;
+
+}

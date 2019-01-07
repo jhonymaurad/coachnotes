@@ -26,6 +26,13 @@ export default class Profile extends Component {
     });
   }
 
+  // async handleDelete(){
+  //   const match = await deleteMatch();
+  //   this.setState({
+  //     matches
+  //   })
+  // }
+
   render(){
     if(this.state.redirectToAuth || !localStorage.getItem('token')){
       return(
@@ -34,16 +41,17 @@ export default class Profile extends Component {
     }
     return(
       <div>
-        <h2>Hello User</h2>
+        <h2>Welcome Back </h2>
+        <h3>This are your events: </h3>
         <button onClick={this.logOut}>Log Out</button>
         <ul>
           {this.state.matches.map(match => (
-            <div>
+            <div key={match.id} className='activity-container'>
               <h3>{match.title}</h3>
               <h4>{match.date}</h4>
               <h4>{match.location}</h4>
               <h4>{match.team}</h4>
-              <h4>{match.coach_id}</h4>
+              <button onClick={this.handleDelete}>Delete</button>
             </div>
           ))}
         </ul>

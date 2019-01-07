@@ -11,27 +11,7 @@ import Footer from './components/Footer';
 import RegisterForm from './components/RegisterForm';
 
 class App extends Component {
-  constructor(){
-    super();
-    this.state = {
-      login: {
-        email: '',
-        password: ''
-      }
-    }
-  }
-
-  handleChange(e){
-    const {name , value} = e.target
-    this.setState(prevState => (
-      {
-        login: {
-          ...prevState.login,
-          [name] : value
-        }
-      }
-    ))
-  }
+  
 
   render() {
     return (

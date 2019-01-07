@@ -28,7 +28,6 @@ export default class RegisterForm extends Component{
     e.preventDefault();
 		if(this.state.coach.email && this.state.coach.password){
 			const user = await register(this.state.coach);
-      console.log(this.state.coach);
 		}
   }
 
