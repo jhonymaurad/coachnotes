@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { getMyMatches } from '../services/matches';
+import { deleteMatch } from '../services/deleteMatch';
 
 export default class Profile extends Component {
   constructor(props){
@@ -26,12 +27,11 @@ export default class Profile extends Component {
     });
   }
 
-  // async handleDelete(){
-  //   const match = await deleteMatch();
-  //   this.setState({
-  //     matches
-  //   })
-  // }
+  async handleDelete(e){
+    const token = localStorage.getItem('token');
+    const match = await deleteMatch(token, e.currentTarget.id);
+    getMyMatches();
+  }
 
   render(){
     if(this.state.redirectToAuth || !localStorage.getItem('token')){
@@ -51,7 +51,7 @@ export default class Profile extends Component {
               <h4>{match.date}</h4>
               <h4>{match.location}</h4>
               <h4>{match.team}</h4>
-              <button onClick={this.handleDelete}>Delete</button>
+              <button id={match.id} onClick={this.handleDelete}>Delete</button>
             </div>
           ))}
         </ul>
