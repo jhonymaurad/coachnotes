@@ -1,7 +1,7 @@
 class PlayersController < ApplicationController
   before_action :set_player, only: [:show, :update, :destroy]
-  before_action :authenticate_coach, only: [:create, :update, :destroy]
-  
+  before_action :authenticate_coach, only: [:create, :update, :destroy, :minep]
+
   # GET /players
   def index
     @players = Player.all
@@ -16,7 +16,7 @@ class PlayersController < ApplicationController
 
   # POST /players
   def create
-    @player = Player.new(player_params)
+    @player = current_coach.players.new(player_params)
 
     if @player.save
       render json: @player, status: :created, location: @player
@@ -37,6 +37,12 @@ class PlayersController < ApplicationController
   # DELETE /players/1
   def destroy
     @player.destroy
+  end
+
+  # GET /players/minep
+  def minep
+    @players. = current_coach.players
+    render json: @players
   end
 
   private
