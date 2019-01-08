@@ -34,7 +34,7 @@ export default function UpdateActivityForm (props){
           id={props.valueTeam}
           onChange={props.onChange} />
         <input type='submit' value='Update Match' />
-        < /form>
+      < /form>
     </div>
   )
 }
