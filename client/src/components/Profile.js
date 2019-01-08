@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import UpdateActivityForm from './UpdateActivityForm';
+import ViewPlayers from './ViewPlayers';
 import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import { getMyMatches } from '../services/matches';
@@ -121,6 +122,7 @@ export default class Profile extends Component {
         <h2>Welcome Back </h2>
         <div className='profile-actions'>
           <Link to='/addmatch'><IoMdCalendar className='navIcons' /></Link>Add Activity
+          <Link to='/viewPlayers'><IoMdCalendar className='navIcons' /></Link> View Players
           <GoSignOut onClick={this.logOut} className='navIcons' /> logOut
         </div>
         <h3>This are your events: </h3>

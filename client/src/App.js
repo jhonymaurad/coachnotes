@@ -9,9 +9,10 @@ import AuthForms from './components/AuthForms';
 import AddMatch from './components/AddMatch';
 import Footer from './components/Footer';
 import RegisterForm from './components/RegisterForm';
+import ViewPlayers from './components/ViewPlayers';
 
 class App extends Component {
-  
+
 
   render() {
     return (
@@ -23,6 +24,7 @@ class App extends Component {
           <Route path="/profile" component={Profile} />
           <Route path="/addmatch" component={AddMatch} />
           <Route path="/register" component={RegisterForm} />
+          <Route path="/viewPlayers" component={ViewPlayers} />
           <Footer />
         </div>
       </Router>
