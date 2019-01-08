@@ -7,6 +7,7 @@ import Home from './components/Home';
 import Profile from './components/Profile';
 import AuthForms from './components/AuthForms';
 import AddMatch from './components/AddMatch';
+import AddPlayer from './components/AddPlayer';
 import Footer from './components/Footer';
 import RegisterForm from './components/RegisterForm';
 import ViewPlayers from './components/ViewPlayers';
@@ -23,6 +24,7 @@ class App extends Component {
           <Route path="/auth" component={AuthForms} />
           <Route path="/profile" component={Profile} />
           <Route path="/addmatch" component={AddMatch} />
+          <Route path="/addplayer" component={AddPlayer} />
           <Route path="/register" component={RegisterForm} />
           <Route path="/viewPlayers" component={ViewPlayers} />
           <Footer />

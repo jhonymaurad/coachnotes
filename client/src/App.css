@@ -70,6 +70,21 @@ input[type=submit]:hover {
   background-color: #93D693;
   color: black;
 }
+
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    color: black;
+    font-family: "Helvetica", arial, sans-serif;
+    font-size: 20px;
+    border:1px solid #ecf0f1;
+    background:#93D693;
+    padding:5px;
+    display: inline-block !important;
+    visibility: visible !important;
+    width: 25%;
+    align-self: center;
+}
 .footer{
   font-size: 20px;
 }

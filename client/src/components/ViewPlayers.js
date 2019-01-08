@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
+import { Link } from 'react-router-dom';
 import UpdatePlayerForm from './UpdatePlayerForm';
 import { getMyPlayers } from '../services/playerServices';
 import { deletePlayer } from '../services/playerServices';
 import { updatePlayer } from '../services/playerServices';
 import avatar from '../images/avatar.png';
+import { IoMdCalendar } from "react-icons/io";
 
 export default class ViewPlayers extends Component {
   constructor(props){
@@ -106,6 +108,7 @@ export default class ViewPlayers extends Component {
     const { players, focusPlayer } = this.state;
     return(
       <div className='viewPlayers'>
+        <Link to='/addplayer'><IoMdCalendar className='navIcons' /></Link>Add Player
         <h1>Current Players I am coaching:</h1>
         <ul className='players-container'>
         {this.state.players.map(player => (

@@ -10,6 +10,19 @@ async function getMyPlayers() {
   return resp.data;
 }
 
+async function createPlayer(token, formData) {
+  try {
+    const player = axios.post('/api/players', formData, {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    });
+    return player.data;
+  } catch (e) {
+    console.log(e);
+  }
+}
+
 async function deletePlayer(token, playerId) {
   try {
     const player = await axios.delete(`/api/players/${playerId}`, {
@@ -38,5 +51,6 @@ async function updatePlayer(token, playerId, playerData) {
 export {
   getMyPlayers,
   deletePlayer,
-  updatePlayer
+  updatePlayer,
+  createPlayer
 }
