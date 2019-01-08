@@ -1,24 +1,25 @@
-# README
+# Coach notes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+For coaches everywhere…A simple website that lets you manage and keep track of your matches and training events
+Stay Organize
+Plan and structure activities for your team in a way that’s best for you. Set priorities and deadlines.
 
-Things you may want to cover:
+Stay on Track
+Follow matches and training through every stage. Create and update your team's activities
 
-* Ruby version
 
-* System dependencies
+# Technologies used:
 
-* Configuration
+-Ruby on Rails
+-React
+-Axios
 
-* Database creation
+# References:
 
-* Database initialization
+-Class examples
+-React documentation
+-Rails documentation
 
-* How to run the test suite
+# Links
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://github.com/jhonymaurad/coachnotes

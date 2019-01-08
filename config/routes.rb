@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :players
   scope 'api/' do
     post 'coach_token' => 'coach_token#create'
     resources :coaches
