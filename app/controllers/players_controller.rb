@@ -41,7 +41,7 @@ class PlayersController < ApplicationController
 
   # GET /players/minep
   def minep
-    @players. = current_coach.players
+    @players = current_coach.players
     render json: @players
   end
 
