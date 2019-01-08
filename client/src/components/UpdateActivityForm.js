@@ -3,7 +3,7 @@ import React from 'react';
 export default function UpdateActivityForm (props){
   return(
     <div className="form-container">
-      <div>Edit Form: {props.title}</div>
+      <div><h2>Edit Form for this activity: {props.title}</h2></div>
       <form onSubmit={props.onSubmit} className="addMatchForm">
         <label htmlFor= 'title'>Title</label>
         <input

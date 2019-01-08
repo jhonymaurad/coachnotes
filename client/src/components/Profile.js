@@ -3,9 +3,9 @@ import UpdateActivityForm from './UpdateActivityForm';
 import ViewPlayers from './ViewPlayers';
 import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
-import { getMyMatches } from '../services/matches';
-import { deleteMatch } from '../services/deleteMatch';
-import { updateMatch } from '../services/updateMatch';
+import { getMyMatches } from '../services/activitiesServices';
+import { deleteMatch } from '../services/activitiesServices';
+import { updateMatch } from '../services/activitiesServices';
 import { IoMdCalendar } from "react-icons/io";
 import { GoSignOut } from 'react-icons/go';
 
@@ -85,7 +85,7 @@ export default class Profile extends Component {
     } = editFormData;
     return(
       <UpdateActivityForm
-        title= {match.title}
+        title= {title}
         onSubmit={this.handleUpdate}
         onChange={this.handleChange}
         valueTitle={title}

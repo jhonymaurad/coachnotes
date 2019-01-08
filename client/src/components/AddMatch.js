@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Redirect } from 'react-router-dom';
-import { createMatch } from '../services/createMatch';
+import { createMatch } from '../services/activitiesServices';
 
 export default class AddMatch extends Component{
   constructor(props) {

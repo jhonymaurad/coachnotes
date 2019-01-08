@@ -106,6 +106,7 @@ export default class ViewPlayers extends Component {
     const { players, focusPlayer } = this.state;
     return(
       <div className='viewPlayers'>
+        <h1>Current Players I am coaching:</h1>
         <ul className='players-container'>
         {this.state.players.map(player => (
           <div

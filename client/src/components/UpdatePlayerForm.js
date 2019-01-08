@@ -3,7 +3,7 @@ import React from 'react';
 export default function UpdatePlayerForm(props) {
   return(
     <div className="form-container">
-      <div>Edit the information for: {props.name}</div>
+      <div><h2>Edit the information for: {props.name}</h2></div>
       <form onSubmit={props.onSubmit} className ="addMatchForm">
         <label htmlFor='name'>Name:</label>
         <input
@@ -43,5 +43,5 @@ export default function UpdatePlayerForm(props) {
         <input type='submit' value='Update Player' />
       < /form>
     </div>
-  )  
+  )
 }
