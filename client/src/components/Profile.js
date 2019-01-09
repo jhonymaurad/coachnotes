@@ -118,37 +118,45 @@ export default class Profile extends Component {
     }
     const {matches, focusMatch } = this.state;
     return(
-      <div>
-        <h2>Welcome Back </h2>
+      <div className='profile-container'>
+        <div className='profile-header'>
+          <h2>Welcome Back </h2>
+          <h4>Manage your teams activities and players</h4>
+        </div>
         <div className='profile-actions'>
           <Link to='/addmatch'><IoMdCalendar className='navIcons' /></Link>Add Activity
           <Link to='/viewPlayers'><IoMdCalendar className='navIcons' /></Link> View Players
           <GoSignOut onClick={this.logOut} className='navIcons' /> logOut
         </div>
-        <h3>This are your events: </h3>
-        <p>* If you need to update an activity, click on it and a form will be display at the bottom
-         of the page to input the new information for the event</p>
-        <ul className='activities-container'>
-          {matches.map(match => (
-            <div
-              key={match.id}
-              className='activity'
-              onClick={() => this.updateFocusMatch(match.id)}>
-              <h3>Type of event:</h3>
-              <h4>{match.title}</h4>
-              <h3>Date:</h3>
-              <h4>{match.date}</h4>
-              <h3>Location:</h3>
-              <h4>{match.location}</h4>
-              <h3>Opposing Team:</h3>
-              <h4>{match.team}</h4>
-              <button
-                id={match.id}
-                onClick={this.handleDelete}
-                className='deleteButtons'>Delete</button>
-            </div>
-          ))}
-        </ul>
+        <div className='profile-description'>
+          <h3>This are your events: </h3>
+          <p>* If you need to update an activity, click on it and a form will be display at the bottom
+           of the page to input the new information for the event</p>
+        </div>
+        <div className='activities-container'>
+
+          <ul>
+            {matches.map(match => (
+              <div
+                key={match.id}
+                className='activity'
+                onClick={() => this.updateFocusMatch(match.id)}>
+                <h3>Type of event:</h3>
+                <h4>{match.title}</h4>
+                <h3>Date:</h3>
+                <h4>{match.date}</h4>
+                <h3>Location:</h3>
+                <h4>{match.location}</h4>
+                <h3>Opposing Team:</h3>
+                <h4>{match.team}</h4>
+                <button
+                  id={match.id}
+                  onClick={this.handleDelete}
+                  className='deleteButtons'>Delete</button>
+              </div>
+            ))}
+          </ul>
+        </div>
         {focusMatch !== null && this.renderFocusMatch() }
       </div>
     );

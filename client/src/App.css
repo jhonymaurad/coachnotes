@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding-top: 10px;
+  padding-top: 15px;
   font-size: 20px;
 }
 .navIcons{
@@ -18,18 +18,41 @@
 }
 .homepage{
   width: 100%;
-  padding-top: 20px;
-
-  height: 70vh;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 35% 30% 35%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "logo-header logo-header logo-header"
+    "slogan slogan slogan"
+    "list-left logo list-right";
 }
-.homepage h1 {
-  font-size: 70px;
+.logo-header{
+  grid-area: logo-header;
+  font-size: 35px;
+  padding-bottom: -50px;
 }
-.homepage p {
+.slogan{
+  grid-area: slogan;
   font-size: 20px;
-  padding-right: 100px;
-  padding-left: 100px;
-
+  padding: 0px 100px;
+}
+.list-left{
+  grid-area: list-left;
+  font-size: 20px;
+  padding-left: 50px;
+  background-color: rgba(22, 145, 51, .5);
+  margin-left: 15px;
+}
+.list-right{
+  grid-area: list-right;
+  font-size: 20px;
+  padding-right: 50px;
+  background-color: rgba(22, 145, 51, .5);
+  margin-right: 15px;
+}
+.logo{
+  grid-area: logo;
 }
 .addMatchForm {
   background-color: white;
