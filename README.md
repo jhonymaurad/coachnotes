@@ -12,7 +12,7 @@ Follow matches and training through every stage. Create and update your team's a
 Add, update or delete players from your profile.
 
 ## Wireframa:
-![Alt text](./client/src/images/wireframe.jpg?raw=true "wireframe")
+![Alt text](./client/src/images/wireframe.jpg =250x250?raw=true "wireframe")
 
 ## ERD
 
