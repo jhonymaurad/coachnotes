@@ -19,26 +19,26 @@ Add, update or delete players from your profile.
 ![Alt text](client/src/images/erd.jpg?raw=true "erd")
 
 ## M.V.P
--User can register for an account
--User can login
--User can create, update or delete an activity
+- User can register for an account
+- User can login
+- User can create, update or delete an activity
 
 
 ## Post M.V.P features
--User can add players to his profile
--User can add, update or delete players from his/her profile
+- User can add players to his profile
+- User can add, update or delete players from his/her profile
 
 ## Technologies used:
 
--Ruby on Rails
--React
--Axios
+- Ruby on Rails
+- React
+- Axios
 
 ## References:
 
--Class examples from WDI General Assembly
--React documentation
--Rails documentation
+- Class examples from WDI General Assembly
+- React documentation
+- Rails documentation
 
 ## Code example
 
