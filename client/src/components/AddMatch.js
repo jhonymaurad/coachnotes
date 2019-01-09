@@ -56,8 +56,8 @@ export default class AddMatch extends Component{
                         id="title"
                         type="text"
                         onChange={this.handleChange}
-                        value={this.state.date}
-                        name='date'
+                        value={this.state.title}
+                        name='title'
                     />
                 </label>
                 <br/>

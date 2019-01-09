@@ -128,7 +128,10 @@ export default class Profile extends Component {
         <div className='profile-actions'>
           <Link to='/addmatch'><IoMdCalendar className='navIcons' />Add Activity</Link>
           <Link to='/viewPlayers'><FiUsers className='navIcons' />View Players</Link>
-          <GoSignOut onClick={this.logOut} className='navIcons'/>
+          <div  onClick={this.logOut} >
+            <GoSignOut className='navIcons'/>
+            logOut
+          </div>
         </div>
         <div className='profile-description'>
           <h3>Your Activities: </h3>
