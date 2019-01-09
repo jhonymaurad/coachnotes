@@ -1,25 +1,45 @@
 # Coach notes
 
-For coaches everywhere…A simple website that lets you manage and keep track of your matches and training events
-Stay Organize
+For coaches everywhere…A simple website that lets you manage and keep track of your matches, training activities and players currently coaching.
+
+###Stay Organize
 Plan and structure activities for your team in a way that’s best for you. Set priorities and deadlines.
 
-Stay on Track
+###Stay on Track
 Follow matches and training through every stage. Create and update your team's activities
 
+###Keep Track of your Squad
+Add, update or delete players from your profile.
 
-# Technologies used:
+##Wireframa:
+![Alt text](./client/src/images/wireframe.jpg?raw=true "wireframe")
+
+##ERD
+
+![Alt text](client/src/images/erd.jpg?raw=true "erd")
+
+##M.V.P
+
+
+##Post M.V.P features
+
+
+## Technologies used:
 
 -Ruby on Rails
 -React
 -Axios
 
-# References:
+## References:
 
 -Class examples
 -React documentation
 -Rails documentation
 
-# Links
+##Code example
 
-https://github.com/jhonymaurad/coachnotes
+
+##Installation instructions
+
+## Links
+GitHub repository [Couch Notes](https://github.com/jhonymaurad/coachnotes).
