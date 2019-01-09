@@ -8,6 +8,8 @@ import { deleteMatch } from '../services/activitiesServices';
 import { updateMatch } from '../services/activitiesServices';
 import { IoMdCalendar } from "react-icons/io";
 import { GoSignOut } from 'react-icons/go';
+import { FiUsers } from "react-icons/fi";
+
 
 export default class Profile extends Component {
   constructor(props){
@@ -121,21 +123,20 @@ export default class Profile extends Component {
       <div className='profile-container'>
         <div className='profile-header'>
           <h2>Welcome Back </h2>
-          <h4>Manage your teams activities and players</h4>
+          <h4>Manage your team's activities and players</h4>
         </div>
         <div className='profile-actions'>
-          <Link to='/addmatch'><IoMdCalendar className='navIcons' /></Link>Add Activity
-          <Link to='/viewPlayers'><IoMdCalendar className='navIcons' /></Link> View Players
-          <GoSignOut onClick={this.logOut} className='navIcons' /> logOut
+          <Link to='/addmatch'><IoMdCalendar className='navIcons' />Add Activity</Link>
+          <Link to='/viewPlayers'><FiUsers className='navIcons' />View Players</Link>
+          <GoSignOut onClick={this.logOut} className='navIcons'/>
         </div>
         <div className='profile-description'>
-          <h3>This are your events: </h3>
+          <h3>Your Activities: </h3>
           <p>* If you need to update an activity, click on it and a form will be display at the bottom
            of the page to input the new information for the event</p>
         </div>
-        <div className='activities-container'>
-
-          <ul>
+        <div>
+          <ul className='activities-container'>
             {matches.map(match => (
               <div
                 key={match.id}
