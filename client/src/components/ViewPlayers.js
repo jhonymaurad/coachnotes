@@ -5,7 +5,7 @@ import UpdatePlayerForm from './UpdatePlayerForm';
 import { getMyPlayers } from '../services/playerServices';
 import { deletePlayer } from '../services/playerServices';
 import { updatePlayer } from '../services/playerServices';
-import avatar from '../images/avatar.png';
+import avatar from '../images/man_avatar.png';
 import { IoMdCalendar } from "react-icons/io";
 
 export default class ViewPlayers extends Component {
@@ -103,30 +103,37 @@ export default class ViewPlayers extends Component {
     }));
   }
 
-
   render(){
     const { players, focusPlayer } = this.state;
     return(
       <div className='viewPlayers'>
+        <div>
+          <h1>My Players:</h1>
+        </div>
         <Link to='/addplayer'><IoMdCalendar className='navIcons' /></Link>Add Player
-        <h1>Current Players I am coaching:</h1>
-        <ul className='players-container'>
+        <ul className='player-info-container'>
         {this.state.players.map(player => (
           <div
             key={player.id}
             className='players-profile'
             onClick={() => this.updateFocusPlayer(player.id)}>
-            <h3>{player.name}</h3>
-            <h3>{player.date_of_birth}</h3>
-            <h3>{player.avatar}</h3>
-            <img src={avatar}
-                 style={{height: '200px', width:"150px", paddingTop:"150px"}}
-                 alt="profile"/>
-            <h3>{player.position}</h3>
-            <h3>{player.team}</h3>
+              <h3>{player.name}</h3>
+              <img src={avatar}
+                   alt="profile"
+                   className='avatarImg'/>
+
+                  <h3>Date of Birth: </h3>
+                  <h5>{player.date_of_birth}</h5>
+                  <h3>Nickname</h3>
+                  <h5>{player.avatar}</h5>
+                  <h3>Position:</h3>
+                  <h5>{player.position}</h5>
+                  <h3>Team:</h3>
+                  <h5>{player.team}</h5>
             <button
               id={player.id}
-              onClick={this.handleDelete}>Delete</button>
+              onClick={this.handleDelete}
+              className='deleteButtons deleteProfile'>Delete</button>
           </div>
         ))}
         </ul>

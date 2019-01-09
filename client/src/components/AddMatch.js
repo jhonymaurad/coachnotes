@@ -52,16 +52,13 @@ export default class AddMatch extends Component{
                 </label>
                 <label>
                     Title: <br/>
-                    <select
-                      id='title'
-                      type = 'input'
-                      onChange={this.handleChange}
-                      value={this.state.title}
-                      name='title'
-                      >
-                        <option value="match">Match</option>
-                        <option value="practice">Practice</option>
-                    </select>
+                    <input
+                        id="title"
+                        type="text"
+                        onChange={this.handleChange}
+                        value={this.state.date}
+                        name='date'
+                    />
                 </label>
                 <br/>
                 <label>

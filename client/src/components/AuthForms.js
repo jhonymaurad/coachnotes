@@ -43,7 +43,7 @@ export default class AuthForms extends Component {
   }
 
   render(){
-    if(this.state.redirectToProfile)
+    if(this.state.redirectToProfile || localStorage.getItem('token'))
     return(
       <Redirect to="/profile" />
     )

@@ -18,7 +18,7 @@ export default function Home (){
         and deadlines.</p>
       </div>
       <div className='logo'>
-        <img src={logo} alt="profile"/>
+        <img src={logo} alt="logo"/>
       </div>
       <div className='list-right'>
         <h2>Stay on Track</h2>

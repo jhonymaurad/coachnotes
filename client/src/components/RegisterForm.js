@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import { register } from '../services/createUser';
+import { TiEdit } from "react-icons/ti";
+import logo from '../images/sports.png';
 
 export default class RegisterForm extends Component{
   constructor(props){
@@ -37,7 +39,9 @@ export default class RegisterForm extends Component{
         className="addMatchForm"
         onSubmit={this.handleSubmit}
       >
-        <h2>Register</h2>
+        <h2>Register  <TiEdit/></h2>
+        <img src={logo} alt='logo' style={{width:'150px', alignSelf: 'center'}}/>
+
         <label htmlFor="email">email</label>
         <input
           type="text"
