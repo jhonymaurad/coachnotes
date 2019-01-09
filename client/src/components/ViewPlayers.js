@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { Link } from 'react-router-dom';
 import UpdatePlayerForm from './UpdatePlayerForm';
+import Counter from './Counter';
 import { getMyPlayers } from '../services/playerServices';
 import { deletePlayer } from '../services/playerServices';
 import { updatePlayer } from '../services/playerServices';
@@ -13,6 +14,7 @@ export default class ViewPlayers extends Component {
     super(props);
     this.state = {
       players: [],
+      playersCount: '',
       focusPlayer: null,
       editPlayerData: {
         "name": '',
@@ -29,8 +31,10 @@ export default class ViewPlayers extends Component {
 
   async componentDidMount(){
     const players = await getMyPlayers();
+    console.log(players.length)
     this.setState({
-      players
+      players: players,
+      playersCount: players.length
     })
   }
 
@@ -109,6 +113,8 @@ export default class ViewPlayers extends Component {
       <div className='viewPlayers'>
         <div>
           <h1>My Players:</h1>
+          <h4>Number of Player:</h4>
+          <Counter playersCount={this.state.playersCount}/>
         </div>
         <Link to='/addplayer'><IoMdCalendar className='navIcons' /></Link>Add Player
         <ul className='player-info-container'>
