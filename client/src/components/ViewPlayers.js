@@ -44,7 +44,8 @@ export default class ViewPlayers extends Component {
     const players = await getMyPlayers();
     this.setState(prevState => ({
       ...prevState.players,
-      players
+      players,
+      focusPlayer: null
     }))
   }
 
