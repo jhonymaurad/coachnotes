@@ -36,8 +36,8 @@ coaches.each do |coach|
 end
 
 coaches.each do |coach|
-  5.times do
-    coach.players.create(name: Faker::Football.player, date_of_birth: Faker::Date.birthday(4, 60), avatar: Faker::SlackEmoji.people, position: Faker::Job.position, team: Faker::Team.name)
+  10.times do
+    coach.players.create(name: Faker::Football.player, date_of_birth: Faker::Date.birthday(4, 60), avatar: Faker::Pokemon.name, position: Faker::Job.position, team: Faker::Team.name)
   end
 end
 

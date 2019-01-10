@@ -1,5 +1,6 @@
 import React from 'react';
 import { GoSignIn } from 'react-icons/go';
+import logo from '../images/sports.png';
 
 export default function LoginForm(props){
   return(
@@ -8,7 +9,7 @@ export default function LoginForm(props){
       onSubmit={props.handleLogin}
     >
       <h2>Log In    <GoSignIn/></h2>
-
+      <img src={logo} alt='logo' style={{width:'150px', alignSelf: 'center'}}/>
       <h5>email:</h5>
       <input
         type="text"

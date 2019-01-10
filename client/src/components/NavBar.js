@@ -9,10 +9,10 @@ import { IoIosPersonAdd } from "react-icons/io";
 export default function NavBar(props){
   return(
     <nav className='navBar'>
-      <Link to='/'><IoLogoDribbble className='navIcons' />Home</Link>
-      <Link to='/auth'><IoIosKey className='navIcons' />Login</Link>
-      <Link to='/register'><IoIosPersonAdd className='navIcons' />Register</Link>
-      <Link to='/profile'><IoIosContact className='navIcons' />Profile</Link>
+      <Link to='/'><IoLogoDribbble className='navIcons' /><h5 className='navIconsText'>Home</h5></Link>
+      <Link to='/auth'><IoIosKey className='navIcons' /><h5 className='navIconsText'>Login</h5></Link>
+      <Link to='/register'><IoIosPersonAdd className='navIcons' /><h5 className='navIconsText'>Register</h5></Link>
+      <Link to='/profile'><IoIosContact className='navIcons' /><h5 className='navIconsText'>Profile</h5></Link>
     </nav>
   );
 }
