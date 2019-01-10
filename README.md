@@ -2,6 +2,8 @@
 
 For coaches everywhere…A simple website that lets you manage and keep track of your matches, training activities and players currently coaching.
 
+The purpose of this application is to demonstrate the Rails backend and React frontend.  
+
 ### Stay Organize
 Plan and structure activities for your team in a way that’s best for you. Set priorities and deadlines.
 
@@ -25,14 +27,16 @@ Add, update or delete players from your profile.
 
 
 ## Post M.V.P features
-- User can add players to his profile
+- User can add players to his/her profile
 - User can add, update or delete players from his/her profile
+-Add filter to the lists. For example filter by player's position or by the priority of the activity.
 
 ## Technologies used:
 
 - Ruby on Rails
 - React
 - Axios
+
 
 ## References:
 
