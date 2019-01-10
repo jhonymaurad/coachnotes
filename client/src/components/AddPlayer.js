@@ -71,7 +71,7 @@ export default class AddPlayer extends Component {
                       type="date"
                       onChange={this.handleChange}
                       value={this.state.date_of_birth}
-                      name='date'
+                      name='date_of_birth'
                   />
               </label>
               <br />
@@ -82,7 +82,7 @@ export default class AddPlayer extends Component {
                       type="text"
                       onChange={this.handleChange}
                       value={this.state.avatar}
-                      name='location'
+                      name='avatar'
                   />
               </label>
               <br/>
@@ -93,7 +93,7 @@ export default class AddPlayer extends Component {
                       type="text"
                       onChange={this.handleChange}
                       value={this.state.position}
-                      name='team'
+                      name='position'
                   />
               </label>
               <br/>
