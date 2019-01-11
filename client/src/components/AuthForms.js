@@ -20,7 +20,6 @@ export default class AuthForms extends Component {
   async handleLogin (e){
     e.preventDefault();
     const tokenData = await login(this.state.credentials);
-    console.log(tokenData);
     localStorage.setItem('token', tokenData.jwt);
     this.setState(
       {

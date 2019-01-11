@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+
+import { Redirect } from 'react-router-dom';
 import { register } from '../services/createUser';
 import { TiEdit } from "react-icons/ti";
 import logo from '../images/sports.png';
@@ -10,7 +12,8 @@ export default class RegisterForm extends Component{
       coach: {
         email: '',
         password: ''
-      }
+      },
+      redirecttoLogin: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -31,9 +34,18 @@ export default class RegisterForm extends Component{
 		if(this.state.coach.email && this.state.coach.password){
 			const user = await register(this.state.coach);
 		}
+    this.setState(
+      {
+        redirecttoLogin: true
+      }
+    )
   }
 
   render() {
+    if(this.state.redirecttoLogin)
+    return(
+      <Redirect to="/auth" />
+    )
     return (
       <form
         className="addMatchForm"

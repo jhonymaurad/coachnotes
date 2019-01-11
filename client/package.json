@@ -2,6 +2,10 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "8.9.4",
+    "yarn": "1.6.0"
+  },
   "proxy": "http://localhost:3001",
   "dependencies": {
     "axios": "^0.18.0",
@@ -13,9 +17,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "yarn --cwd client install && yarn --cwd client build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build": "yarn --cwd client install && yarn --cwd client build",
+    "deploy": "cp -a client/build/. public/",
+    "heroku-postbuild": "yarn build && yarn deploy"
   },
   "eslintConfig": {
     "extends": "react-app"
