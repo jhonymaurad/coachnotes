@@ -13,6 +13,14 @@ Follow matches and training through every stage. Create and update your team's a
 ### Keep Track of your Squad
 Add, update or delete players from your profile.
 
+## Instructions to get App running
+clone project  
+rails db:drop db:create db:migrate db:seed  
+npm i  
+CD into client  
+npm i  
+rails start
+
 ## Wireframa:
 ![Alt text](./client/src/images/wireframe.jpg?raw=true "wireframe")
 
