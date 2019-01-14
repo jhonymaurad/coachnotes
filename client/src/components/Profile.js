@@ -46,8 +46,8 @@ export default class Profile extends Component {
           <h2>Welcome Back </h2>
           <h4>Manage your team's activities and players</h4>
         </div>
-        <div  onClick={this.logOut} >
-          <GoSignOut className='navIcons'/>
+        <div>
+          <GoSignOut className='navIcons'  onClick={this.logOut}/>
           logOut
         </div>
         <div className='profile-actions'>

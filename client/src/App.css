@@ -146,6 +146,7 @@ input[type="date"] {
   margin-bottom: 5px;
   padding-top: 60px;
   background-color: rgba(22, 145, 51, .5);
+  box-shadow: 10px 10px 5px #0A2D0A;
   display: flex;
   flex-direction: column;
 }

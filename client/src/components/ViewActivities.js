@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import UpdateActivityForm from './UpdateActivityForm';
 import { Link } from 'react-router-dom';
+import Counter from './Counter';
 
 import { getMyMatches } from '../services/activitiesServices';
 import { deleteMatch } from '../services/activitiesServices';
@@ -14,6 +15,7 @@ export default class ViewActivities extends Component {
     super(props);
     this.state = {
       matches: [],
+      numOFActivities: '',
       redirectToAuth: false,
       focusMatch: null,
       editFormData: {
@@ -30,7 +32,8 @@ export default class ViewActivities extends Component {
   async componentDidMount(){
     const matches = await getMyMatches();
     this.setState({
-      matches
+      matches: matches,
+      numOFActivities: matches.length
     })
   }
 
@@ -107,7 +110,9 @@ export default class ViewActivities extends Component {
       <div className='profile-container'>
         <div className='profile-description'>
           <h3>Your Activities: </h3>
-          <p>* If you need to update an activity, click on it and a form will be display at the bottom
+          <h4>Number of Activities:</h4>
+          <Counter playersCount={this.state.numOFActivities}/>
+          <p>* To update an activity, click on it and a form will be display at the bottom
            of the page to input the new information for the event</p>
         </div>
         <div>

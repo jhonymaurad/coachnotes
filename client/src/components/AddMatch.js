@@ -42,7 +42,7 @@ export default class AddMatch extends Component{
   render(){
     if(this.state.redirectToProfile)
     return (
-      <Redirect to="/profile" />
+      <Redirect to="/viewActivities" />
     )
     return (
         <div className="form-container">

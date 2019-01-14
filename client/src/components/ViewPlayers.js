@@ -116,6 +116,8 @@ export default class ViewPlayers extends Component {
           <h1>My Players:</h1>
           <h4>Number of Player:</h4>
           <Counter playersCount={this.state.playersCount}/>
+          <p>* To update a player, click on it and a form will be display at the bottom
+           of the page to input the new information</p>
         </div>
         <ul className='player-info-container'>
         {this.state.players.map(player => (
