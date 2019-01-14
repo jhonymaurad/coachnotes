@@ -11,6 +11,7 @@ import AddPlayer from './components/AddPlayer';
 import Footer from './components/Footer';
 import RegisterForm from './components/RegisterForm';
 import ViewPlayers from './components/ViewPlayers';
+import ViewActivities from './components/ViewActivities';
 
 class App extends Component {
 
@@ -27,6 +28,7 @@ class App extends Component {
           <Route path="/addplayer" component={AddPlayer} />
           <Route path="/register" component={RegisterForm} />
           <Route path="/viewPlayers" component={ViewPlayers} />
+          <Route path="/ViewActivities" component={ViewActivities} />
           <Footer />
         </div>
       </Router>

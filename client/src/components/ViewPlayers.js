@@ -117,7 +117,6 @@ export default class ViewPlayers extends Component {
           <h4>Number of Player:</h4>
           <Counter playersCount={this.state.playersCount}/>
         </div>
-        <Link to='/addplayer'><IoMdCalendar className='navIcons' /></Link>Add Player
         <ul className='player-info-container'>
         {this.state.players.map(player => (
           <div

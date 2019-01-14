@@ -137,6 +137,15 @@ input[type="date"] {
   display: flex;
   flex-direction: row;
   justify-content:space-around;
+  flex-wrap: wrap;
+}
+.userViews{
+  width:600px;
+  height:180px;
+  margin-bottom: 5px;
+  padding-top: 60px;
+  border: solid red 2px;
+  background-color: rgba(22, 145, 51, .5);
 }
 .profile-description{
   font-size: 15px;
